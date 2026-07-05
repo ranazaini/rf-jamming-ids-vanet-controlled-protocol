@@ -1,0 +1,44 @@
+{
+  "KNN [14]": {
+    "lit_acc_pct": 82.27,
+    "delta_pp": 5.492814241320588,
+    "t_statistic": 7.685315769324233,
+    "p_value": 3.0258699133353177e-07,
+    "significance": "*** (p<0.001)"
+  },
+  "Random Forest [14]": {
+    "lit_acc_pct": 80.04,
+    "delta_pp": 7.722814241320586,
+    "t_statistic": 10.805438426425528,
+    "p_value": 1.4899959317220673e-09,
+    "significance": "*** (p<0.001)"
+  },
+  "LSTM M2 [15]": {
+    "lit_acc_pct": 84.83000000000001,
+    "delta_pp": 2.9328142413205804,
+    "t_statistic": 4.103470925297621,
+    "p_value": 0.0006049331113828253,
+    "significance": "*** (p<0.001)"
+  },
+  "BERT WordPiece [25]": {
+    "lit_acc_pct": 90.25,
+    "delta_pp": -2.487185758679411,
+    "t_statistic": -3.4799662054149376,
+    "p_value": 0.0025067259380901923,
+    "significance": "**  (p<0.01)"
+  },
+  "BERT BBPE [25]": {
+    "lit_acc_pct": 80.25,
+    "delta_pp": 7.512814241320587,
+    "t_statistic": 10.511615216563973,
+    "p_value": 2.3420694055436095e-09,
+    "significance": "*** (p<0.001)"
+  },
+  "LSTM-RELU-IO-L1 [39]": {
+    "lit_acc_pct": 85.17,
+    "delta_pp": 2.5928142413205846,
+    "t_statistic": 3.627757156950344,
+    "p_value": 0.0017916160724063422,
+    "significance": "**  (p<0.01)"
+  }
+}

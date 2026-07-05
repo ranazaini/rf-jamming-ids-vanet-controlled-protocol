@@ -1,0 +1,18 @@
+{
+  "k=3": {
+    "accuracy_formatted": "87.82 \u00b1 3.23",
+    "density_formatted": "0.0243 \u00b1 0.0077"
+  },
+  "k=5": {
+    "accuracy_formatted": "87.76 \u00b1 3.20",
+    "density_formatted": "0.0406 \u00b1 0.0128"
+  },
+  "k=7": {
+    "accuracy_formatted": "87.76 \u00b1 3.20",
+    "density_formatted": "0.0568 \u00b1 0.0179"
+  },
+  "k=10": {
+    "accuracy_formatted": "87.76 \u00b1 3.20",
+    "density_formatted": "0.0811 \u00b1 0.0255"
+  }
+}

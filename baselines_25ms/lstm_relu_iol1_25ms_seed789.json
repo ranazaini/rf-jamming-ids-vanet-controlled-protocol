@@ -1,0 +1,61 @@
+{
+  "baseline": "LSTM_RELU_IOL1",
+  "seed": 789,
+  "target_speed": 25,
+  "accuracy": 0.25,
+  "precision_macro": 0.125,
+  "recall_macro": 0.5,
+  "f1_macro": 0.2,
+  "precision_per_class": [
+    0.0,
+    0.25,
+    0.0
+  ],
+  "recall_per_class": [
+    0.0,
+    1.0,
+    0.0
+  ],
+  "f1_per_class": [
+    0.0,
+    0.4,
+    0.0
+  ],
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      6,
+      0
+    ]
+  ],
+  "y_true": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+  ],
+  "y_pred": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ]
+}

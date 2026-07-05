@@ -1,0 +1,71 @@
+{
+  "baseline": "RF_Stat",
+  "seed": 123,
+  "target_speed": 25,
+  "accuracy": 1.0,
+  "precision_macro": 1.0,
+  "recall_macro": 1.0,
+  "f1_macro": 1.0,
+  "precision_per_class": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "recall_per_class": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "f1_per_class": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "confusion_matrix": [
+    [
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      6
+    ]
+  ],
+  "y_true": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    2,
+    2,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2
+  ],
+  "y_pred": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    2,
+    2,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "RF_Stat": {
+    "detector_mean": 99.37439574309104,
+    "detector_std": 0.8490860688860079,
+    "baseline_mean": 99.92658432688417,
+    "baseline_std": 0.2402019109610817,
+    "delta_pp": -0.5521885837931229,
+    "t_statistic": -2.639458025789088,
+    "p_value": 0.01616217751756116,
+    "wilcoxon_p": 0.019186654647626426,
+    "significance": "*"
+  },
+  "LSTM_RELU_IOL1": {
+    "detector_mean": 99.37439574309104,
+    "detector_std": 0.8490860688860079,
+    "baseline_mean": 91.27657327966345,
+    "baseline_std": 18.64929533151473,
+    "delta_pp": 8.097822463427596,
+    "t_statistic": 1.9997994666074235,
+    "p_value": 0.06002541121130218,
+    "wilcoxon_p": 0.012274756174561622,
+    "significance": "n.s."
+  },
+  "BERT_WordPiece": {
+    "detector_mean": 99.37439574309104,
+    "detector_std": 0.8490860688860079,
+    "baseline_mean": 99.07359589476393,
+    "baseline_std": 1.7260070849681162,
+    "delta_pp": 0.3007998483271268,
+    "t_statistic": 1.1234569519921696,
+    "p_value": 0.27523875766542905,
+    "wilcoxon_p": 0.43262594902013973,
+    "significance": "n.s."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "RF_Stat": {
+    "d_paired": 0.5911172482430708,
+    "d_pooled": 0.867367727694291,
+    "interpretation": "medium",
+    "delta_pp": 5.303349694260495
+  },
+  "LSTM_RELU_IOL1": {
+    "d_paired": 0.39166862593419133,
+    "d_pooled": 0.5839393306314516,
+    "interpretation": "small",
+    "delta_pp": 8.856392305288063
+  },
+  "BERT_WordPiece": {
+    "d_paired": 0.7837371786920498,
+    "d_pooled": 1.12454124623326,
+    "interpretation": "medium",
+    "delta_pp": 8.441072206861655
+  }
+}
