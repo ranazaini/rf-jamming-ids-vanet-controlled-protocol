@@ -9,13 +9,13 @@ The study proposes and evaluates a hybrid ensemble intrusion detection system fo
 ## Repository Structure
 
 ```
-.
-├── README.md
 ├── notebooks/
 │   ├── Detector_15ms_FINAL_20seed___Komputasi_Task_1.ipynb   # Main detector + baselines, 15 m/s regime
 │   ├── Detector_25ms_FINAL_20seed___Komputasi_Task_1.ipynb   # Main detector + baselines, 25 m/s regime
-│   └── t1-t11_20_seed/                                       # Supplementary analysis notebooks (T1–T11)
+│   ├── t1-t11_20_seed/                                       # Supplementary analysis notebooks (T1–T11)
+│   └── 01_… – 07_…                                           # Revision notebooks (see "Revision" section)
 │
+├── src/                # Revision code (pcmef_fixed.py, pcmef_v2_infra.py, pcmef_corrected_stats.py, jamshield_e59_counter.py)
 ├── baselines_15ms/     # RF-Stat, LSTM-RELU-IO-L1, BERT-WP per-seed results — 15 m/s
 ├── baselines_25ms/     # Same baselines — 25 m/s
 ├── seed_runs_15ms/     # Detector per-seed results, ablation, convergence — 15 m/s
@@ -111,6 +111,29 @@ Source:[IEEE DataPort](https://ieee-dataport.org/documents/rf-jamming-dataset-ve
   publisher = {MDPI}
 }
 ```
+## Revision: protocol-controlled re-evaluation (notebooks 01-07)
+
+The notebooks and results above correspond to the original submission. The revised analysis (pseudo-episode-grouped partitioning, 2x2 protocol x model factorial, corrected statistics, JamShield check, CPU latency) is in `notebooks/01`-`07` and `src/`. **Numbers in the revised manuscript come from these notebooks; the "Main Results" table above is from the original pipeline and is kept for reference.**
+
+| Path | Purpose |
+|---|---|
+| `src/pcmef_fixed.py` | Core library: windowing, grouped partitioning, RF-Stat / LSTM / BERT / k-NN runners, factorial decomposition, hybrid |
+| `src/pcmef_v2_infra.py` | Sanity suite (no episode across partitions, unique alignment keys) |
+| `src/pcmef_corrected_stats.py` | Inference corrected for non-independent seeds (SE rescaled by episode ratio) |
+| `src/jamshield_e59_counter.py` | JamShield counter-column handling and RF runner |
+| `notebooks/01_protocol_vs_model_15ms.ipynb` | Protocol vs model, 15 m/s (RF-Stat, LSTM, BERT) |
+| `notebooks/02_protocol_vs_model_25ms.ipynb` | Protocol vs model, 25 m/s |
+| `notebooks/03_knn_sensitivity.ipynb` | k-NN sensitivity |
+| `notebooks/04_followup_hybrid_truncation.ipynb` | Overlap audit, hybrid vs baselines, TOST, BERT truncation, corrected statistics |
+| `notebooks/05_jamshield_validation.ipynb` | JamShield independent-dataset check |
+| `notebooks/06_latency_cpu.ipynb` | Single-thread CPU latency and memory footprint |
+| `notebooks/07_fill_in_values.ipynb` | Corrected intervals, power, summary values from existing result JSON |
+
+**Setup.** Notebooks target Google Colab with Drive mounted. Copy `src/pcmef_fixed.py`, `src/pcmef_v2_infra.py` and `src/pcmef_corrected_stats.py` to `MyDrive/Detector_Results/`, and `src/jamshield_e59_counter.py` to `MyDrive/JamShield_Dataset/`; the notebooks read them from there. Datasets are not included.
+
+**Run order.** 01 -> 02 -> 03 -> 04 -> 05 -> 07; run 06 in a fresh CPU runtime. Results are cached per cell/seed as JSON; a cache is reused only if the per-model code hash matches, so do not edit the model functions in `pcmef_fixed.py`.
+
+**Inference note.** The 20 seeds re-draw the partition of the same pseudo-episodes, so they are not independent. Notebook 04 reports both plain paired tests and corrected ones (SE inflation about x2.5); the corrected ones are the conservative reference.
 
 ## License
 
