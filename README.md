@@ -9,12 +9,14 @@ The study proposes and evaluates a hybrid ensemble intrusion detection system fo
 ## Repository Structure
 
 ```
+.
+├── README.md
 ├── notebooks/
 │   ├── Detector_15ms_FINAL_20seed___Komputasi_Task_1.ipynb   # Main detector + baselines, 15 m/s regime
 │   ├── Detector_25ms_FINAL_20seed___Komputasi_Task_1.ipynb   # Main detector + baselines, 25 m/s regime
 │   ├── t1-t11_20_seed/                                       # Supplementary analysis notebooks (T1–T11)
 │   └── 01_… – 07_…                                           # Revision notebooks (see "Revision" section)
-│
+├── data/jamshield/     # JamShield CSV files + source/license note (used by notebook 05)
 ├── src/                # Revision code (pcmef_fixed.py, pcmef_v2_infra.py, pcmef_corrected_stats.py, jamshield_e59_counter.py)
 ├── baselines_15ms/     # RF-Stat, LSTM-RELU-IO-L1, BERT-WP per-seed results — 15 m/s
 ├── baselines_25ms/     # Same baselines — 25 m/s
@@ -98,19 +100,6 @@ Source:[IEEE DataPort](https://ieee-dataport.org/documents/rf-jamming-dataset-ve
 - **Murshed et al.** — LSTM-RELU-IO-L1 for jamming classification.
 - **Wickramasurendra et al.** — BERT WordPiece for jamming signal classification.
 
-## Citation
-
-```bibtex
-@article{fathiyana2026protocol,
-  title   = {Protocol-Controlled Multi-Seed Re-Evaluation of RF Jamming IDS
-             in Vehicular Networks},
-  author  = {Fathiyana, Rana Zaini and Ramli, Kalamullah and Harwahyu, Ruki
-             and Gunawan, Teddy Surya},
-  journal = {Future Internet},
-  year    = {2026},
-  publisher = {MDPI}
-}
-```
 ## Revision: protocol-controlled re-evaluation (notebooks 01-07)
 
 The notebooks and results above correspond to the original submission. The revised analysis (pseudo-episode-grouped partitioning, 2x2 protocol x model factorial, corrected statistics, JamShield check, CPU latency) is in `notebooks/01`-`07` and `src/`. **Numbers in the revised manuscript come from these notebooks; the "Main Results" table above is from the original pipeline and is kept for reference.**
@@ -129,12 +118,10 @@ The notebooks and results above correspond to the original submission. The revis
 | `notebooks/06_latency_cpu.ipynb` | Single-thread CPU latency and memory footprint |
 | `notebooks/07_fill_in_values.ipynb` | Corrected intervals, power, summary values from existing result JSON |
 
-**Setup.** Notebooks target Google Colab with Drive mounted. Copy `src/pcmef_fixed.py`, `src/pcmef_v2_infra.py` and `src/pcmef_corrected_stats.py` to `MyDrive/Detector_Results/`, and `src/jamshield_e59_counter.py` to `MyDrive/JamShield_Dataset/`; the notebooks read them from there. Datasets are not included.
-
+**Setup.** Notebooks target Google Colab with Drive mounted. Copy `src/pcmef_fixed.py`, `src/pcmef_v2_infra.py` and `src/pcmef_corrected_stats.py` to `MyDrive/Detector_Results/`, and `src/jamshield_e59_counter.py` to `MyDrive/JamShield_Dataset/`; the notebooks read them from there. The Kosmanos dataset is not included (download from IEEE DataPort, see above). The JamShield files are in `data/jamshield/` (source and license in `data/jamshield/README.md`); copy them to `MyDrive/JamShield_Dataset/` before running notebook 05.
 **Run order.** 01 -> 02 -> 03 -> 04 -> 05 -> 07; run 06 in a fresh CPU runtime. Results are cached per cell/seed as JSON; a cache is reused only if the per-model code hash matches, so do not edit the model functions in `pcmef_fixed.py`.
 
 **Inference note.** The 20 seeds re-draw the partition of the same pseudo-episodes, so they are not independent. Notebook 04 reports both plain paired tests and corrected ones (SE inflation about x2.5); the corrected ones are the conservative reference.
 
 ## License
-
-Code: MIT. Dataset: subject to the original Kosmanos et al. license terms.
+Code: MIT. Datasets: subject to the original licenses (Kosmanos et al.; JamShield, see `data/jamshield/README.md`).
