@@ -16,7 +16,6 @@ The study proposes and evaluates a hybrid ensemble intrusion detection system fo
 │   ├── Detector_25ms_FINAL_20seed___Komputasi_Task_1.ipynb   # Main detector + baselines, 25 m/s regime
 │   ├── t1-t11_20_seed/                                       # Supplementary analysis notebooks (T1–T11)
 │   └── 01_… – 07_…                                           # Revision notebooks (see "Revision" section)
-├── data/jamshield/     # JamShield CSV files + source/license note (used by notebook 05)
 ├── src/                # Revision code (pcmef_fixed.py, pcmef_v2_infra.py, pcmef_corrected_stats.py, jamshield_e59_counter.py)
 ├── baselines_15ms/     # RF-Stat, LSTM-RELU-IO-L1, BERT-WP per-seed results — 15 m/s
 ├── baselines_25ms/     # Same baselines — 25 m/s
@@ -38,6 +37,8 @@ This work uses the public **RF Jamming Dataset for Vehicular Wireless Networks**
 Columns used: `SNR`, `RSSI`, `PDR`, `Speed`, `Relative_Speed`, `Scenario`, `Time`
 
 Source:[IEEE DataPort](https://ieee-dataport.org/documents/rf-jamming-dataset-vehicular-wireless-networks)
+
+**Independent validation dataset:** JamShield (Panitsas, Yigit, Tassiulas, Maglaras, Canberk), [IEEE DataPort](https://ieee-dataport.org/documents/jamshield-dataset), DOI 10.21227/5hzf-w161; raw CSV files in the [authors' GitHub repository](https://github.com/panitsasi/JamShield-Dataset). Used in `notebooks/05_jamshield_validation.ipynb`.
 
 ## Method Overview
 
@@ -118,10 +119,11 @@ The notebooks and results above correspond to the original submission. The revis
 | `notebooks/06_latency_cpu.ipynb` | Single-thread CPU latency and memory footprint |
 | `notebooks/07_fill_in_values.ipynb` | Corrected intervals, power, summary values from existing result JSON |
 
-**Setup.** Notebooks target Google Colab with Drive mounted. Copy `src/pcmef_fixed.py`, `src/pcmef_v2_infra.py` and `src/pcmef_corrected_stats.py` to `MyDrive/Detector_Results/`, and `src/jamshield_e59_counter.py` to `MyDrive/JamShield_Dataset/`; the notebooks read them from there. The Kosmanos dataset is not included (download from IEEE DataPort, see above). The JamShield files are in `data/jamshield/` (source and license in `data/jamshield/README.md`); copy them to `MyDrive/JamShield_Dataset/` before running notebook 05.
+**Setup.** Notebooks target Google Colab with Drive mounted. Copy `src/pcmef_fixed.py`, `src/pcmef_v2_infra.py` and `src/pcmef_corrected_stats.py` to `MyDrive/Detector_Results/`, and `src/jamshield_e59_counter.py` to `MyDrive/JamShield_Dataset/`; the notebooks read them from there. The Kosmanos dataset is not included (download from IEEE DataPort, see above). The JamShield dataset is not redistributed here (no license is stated by its authors); download it from the [authors' repository](https://github.com/panitsasi/JamShield-Dataset) (DOI: [10.21227/5hzf-w161](https://doi.org/10.21227/5hzf-w161)) and copy the CSV files from its `data/` folder to `MyDrive/JamShield_Dataset/` before running notebook 05.
+
 **Run order.** 01 -> 02 -> 03 -> 04 -> 05 -> 07; run 06 in a fresh CPU runtime. Results are cached per cell/seed as JSON; a cache is reused only if the per-model code hash matches, so do not edit the model functions in `pcmef_fixed.py`.
 
 **Inference note.** The 20 seeds re-draw the partition of the same pseudo-episodes, so they are not independent. Notebook 04 reports both plain paired tests and corrected ones (SE inflation about x2.5); the corrected ones are the conservative reference.
 
 ## License
-Code: MIT. Datasets: subject to the original licenses (Kosmanos et al.; JamShield, see `data/jamshield/README.md`).
+Code: MIT. Datasets are not redistributed and remain subject to their original terms (Kosmanos et al.; JamShield, Panitsas et al.).
