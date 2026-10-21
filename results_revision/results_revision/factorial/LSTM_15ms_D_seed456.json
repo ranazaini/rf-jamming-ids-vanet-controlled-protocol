@@ -1,0 +1,45 @@
+{
+  "accuracy": 0.8849557522123894,
+  "precision_macro": 0.8737296747967479,
+  "recall_macro": 0.883227943390545,
+  "f1_macro": 0.8759268180719588,
+  "confusion_matrix": [
+    [
+      40,
+      0,
+      1
+    ],
+    [
+      0,
+      37,
+      8
+    ],
+    [
+      0,
+      4,
+      23
+    ]
+  ],
+  "balanced_accuracy": 0.883227943390545,
+  "majority_class": 1,
+  "majority_class_baseline_accuracy": 0.39823008849557523,
+  "test_window_count_per_class": {
+    "0": 41,
+    "1": 45,
+    "2": 27
+  },
+  "test_episode_count_per_class": {
+    "0": 2,
+    "1": 2,
+    "2": 2
+  },
+  "model": "LSTM",
+  "arch": "modified",
+  "protocol": "pcmef",
+  "cell": "D",
+  "seed": 456,
+  "n_train": 430,
+  "n_test": 113,
+  "target_speed": 15,
+  "code_hash": "ec0582be6144"
+}

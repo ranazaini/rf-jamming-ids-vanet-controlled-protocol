@@ -1,0 +1,44 @@
+{
+  "no_knn": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "graph_density": 0.0
+  },
+  "k=1": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "graph_density": 0.00205761316872428
+  },
+  "k=3": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "graph_density": 0.006172839506172839
+  },
+  "k=5": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "graph_density": 0.0102880658436214
+  },
+  "knn_branch_only_k5": {
+    "accuracy": 0.9724770642201835,
+    "macro_f1": 0.9715394912985275,
+    "graph_density": 0.0102880658436214
+  },
+  "k=7": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "graph_density": 0.01440329218106996
+  },
+  "k=10": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "graph_density": 0.0205761316872428
+  },
+  "k=15": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "graph_density": 0.030864197530864196
+  },
+  "seed": 33,
+  "target_speed": 25
+}

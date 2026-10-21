@@ -1,0 +1,7 @@
+folder,n,macroF1,balanced_acc
+results,40,97.16 ± 2.39,97.43 ± 2.44
+results_e510,20,71.13 ± 13.44,nan ± nan
+results_e510_v2,21,67.81 ± 7.06,68.75 ± 7.22
+results_e510_v3_manual,20,72.98 ± 3.03,71.14 ± 2.87
+results_e59,20,95.42 ± 1.45,95.97 ± 1.41
+results_e59/cadangan_sebelum_E03,20,95.42 ± 1.45,nan ± nan

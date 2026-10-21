@@ -1,0 +1,32 @@
+{
+  "accuracy": 0.9544666088464874,
+  "precision_macro": 0.9449443463240432,
+  "recall_macro": 0.9528681718949574,
+  "f1_macro": 0.9487248073206698,
+  "confusion_matrix": [
+    [
+      2144,
+      117
+    ],
+    [
+      198,
+      4459
+    ]
+  ],
+  "balanced_accuracy": 0.9528681718949574,
+  "majority_class": 1,
+  "majority_class_baseline_accuracy": 0.6731714368314542,
+  "test_window_count_per_class": {
+    "0": 2261,
+    "1": 4657
+  },
+  "model": "LSTM",
+  "dataset": "JamShield",
+  "protocol": "pcmef",
+  "arch": "modified",
+  "seed": 33,
+  "n_train": 20647,
+  "n_test": 6918,
+  "max_len": 30,
+  "code_hash": "075588629e0b"
+}

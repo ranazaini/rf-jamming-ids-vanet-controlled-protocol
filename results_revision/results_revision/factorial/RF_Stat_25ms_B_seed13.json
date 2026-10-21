@@ -1,0 +1,45 @@
+{
+  "accuracy": 0.9477124183006536,
+  "precision_macro": 0.9518867924528301,
+  "recall_macro": 0.9535104364326376,
+  "f1_macro": 0.9525010508617067,
+  "confusion_matrix": [
+    [
+      40,
+      0,
+      0
+    ],
+    [
+      0,
+      57,
+      5
+    ],
+    [
+      0,
+      3,
+      48
+    ]
+  ],
+  "balanced_accuracy": 0.9535104364326376,
+  "majority_class": 1,
+  "majority_class_baseline_accuracy": 0.40522875816993464,
+  "test_window_count_per_class": {
+    "0": 40,
+    "1": 62,
+    "2": 51
+  },
+  "test_episode_count_per_class": {
+    "0": 2,
+    "1": 2,
+    "2": 2
+  },
+  "model": "RF_Stat",
+  "arch": "source",
+  "protocol": "pcmef",
+  "cell": "B",
+  "seed": 13,
+  "n_train": 673,
+  "n_test": 153,
+  "target_speed": 25,
+  "code_hash": "f1cf34562683"
+}

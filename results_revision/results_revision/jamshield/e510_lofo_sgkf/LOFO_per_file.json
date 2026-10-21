@@ -1,0 +1,169 @@
+{
+  "pooled": {
+    "balanced_accuracy": 67.39,
+    "f1_macro": 68.87,
+    "n_pooled": 34211
+  },
+  "per_file": [
+    {
+      "file": "constant_jammer_gaussian_10db.csv",
+      "label": "attack",
+      "n_windows": 1435,
+      "n_correct": 1337,
+      "accuracy_pct": 93.17
+    },
+    {
+      "file": "constant_jammer_gaussian_20db.csv",
+      "label": "attack",
+      "n_windows": 1470,
+      "n_correct": 1470,
+      "accuracy_pct": 100.0
+    },
+    {
+      "file": "constant_jammer_gaussian_25db.csv",
+      "label": "attack",
+      "n_windows": 1464,
+      "n_correct": 1464,
+      "accuracy_pct": 100.0
+    },
+    {
+      "file": "constant_jammer_gaussian_dynamic_gain.csv",
+      "label": "attack",
+      "n_windows": 1069,
+      "n_correct": 981,
+      "accuracy_pct": 91.77
+    },
+    {
+      "file": "constant_jammer_pulse_20db.csv",
+      "label": "attack",
+      "n_windows": 540,
+      "n_correct": 540,
+      "accuracy_pct": 100.0
+    },
+    {
+      "file": "constant_jammer_triangle_20db.csv",
+      "label": "attack",
+      "n_windows": 1143,
+      "n_correct": 1143,
+      "accuracy_pct": 100.0
+    },
+    {
+      "file": "data_benign_1.csv",
+      "label": "benign",
+      "n_windows": 5805,
+      "n_correct": 1915,
+      "accuracy_pct": 32.99
+    },
+    {
+      "file": "data_benign_2.csv",
+      "label": "benign",
+      "n_windows": 1101,
+      "n_correct": 385,
+      "accuracy_pct": 34.97
+    },
+    {
+      "file": "data_benign_3.csv",
+      "label": "benign",
+      "n_windows": 1260,
+      "n_correct": 561,
+      "accuracy_pct": 44.52
+    },
+    {
+      "file": "data_benign_4.csv",
+      "label": "benign",
+      "n_windows": 2924,
+      "n_correct": 1662,
+      "accuracy_pct": 56.84
+    },
+    {
+      "file": "random_jammer_cos_dynamic_gain.csv",
+      "label": "attack",
+      "n_windows": 1276,
+      "n_correct": 1209,
+      "accuracy_pct": 94.75
+    },
+    {
+      "file": "random_jammer_gaussian_NLOS.csv",
+      "label": "attack",
+      "n_windows": 1195,
+      "n_correct": 1175,
+      "accuracy_pct": 98.33
+    },
+    {
+      "file": "random_jammer_pulse_dynamic_gain.csv",
+      "label": "attack",
+      "n_windows": 1596,
+      "n_correct": 1542,
+      "accuracy_pct": 96.62
+    },
+    {
+      "file": "random_jammer_saw_tooth_dynamic_gain.csv",
+      "label": "attack",
+      "n_windows": 2628,
+      "n_correct": 2485,
+      "accuracy_pct": 94.56
+    },
+    {
+      "file": "random_jammer_triangle_dynamic_gain.csv",
+      "label": "attack",
+      "n_windows": 1260,
+      "n_correct": 764,
+      "accuracy_pct": 60.63
+    },
+    {
+      "file": "reactive_jammer_cos_NLOS.csv",
+      "label": "attack",
+      "n_windows": 1150,
+      "n_correct": 1021,
+      "accuracy_pct": 88.78
+    },
+    {
+      "file": "reactive_jammer_gaussian_LOS.csv",
+      "label": "attack",
+      "n_windows": 2700,
+      "n_correct": 2700,
+      "accuracy_pct": 100.0
+    },
+    {
+      "file": "reactive_jammer_gaussian_additional_end_devices.csv",
+      "label": "attack",
+      "n_windows": 1225,
+      "n_correct": 1151,
+      "accuracy_pct": 93.96
+    },
+    {
+      "file": "reactive_jammer_square_NLOS.csv",
+      "label": "attack",
+      "n_windows": 1750,
+      "n_correct": 1700,
+      "accuracy_pct": 97.14
+    },
+    {
+      "file": "reactive_jammer_triangle_NLOS.csv",
+      "label": "attack",
+      "n_windows": 1220,
+      "n_correct": 1052,
+      "accuracy_pct": 86.23
+    }
+  ],
+  "summary": [
+    {
+      "label": "attack",
+      "n_files": 16,
+      "mean_acc": 93.5,
+      "min_acc": 60.63,
+      "max_acc": 100.0,
+      "windows": 23121,
+      "pooled_recall": 94.0
+    },
+    {
+      "label": "benign",
+      "n_files": 4,
+      "mean_acc": 42.33,
+      "min_acc": 32.99,
+      "max_acc": 56.84,
+      "windows": 11090,
+      "pooled_recall": 40.78
+    }
+  ]
+}

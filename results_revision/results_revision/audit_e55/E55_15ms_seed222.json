@@ -1,0 +1,10 @@
+{
+  "n_train_windows": 446,
+  "n_test_windows": 110,
+  "n_gagal_exclude": 0,
+  "d_test_to_train_mean": 1.2473728823763544,
+  "d_train_to_train_excl_mean": 1.29280343907297,
+  "p05_train_to_train_excl": 0.27177259204965737,
+  "pct_test_closer_than_p05_train": 5.454545454545454,
+  "seed": 222
+}

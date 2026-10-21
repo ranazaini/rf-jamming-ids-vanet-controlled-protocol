@@ -1,0 +1,10 @@
+model,efek,delta,se_corr,df,mde_80
+RF_Stat,delta_protocol,-0.87,2.82,37.6,8.1
+RF_Stat,delta_model,14.03,2.94,19.0,8.7
+RF_Stat,interaction,-3.59,4.58,57.7,13.1
+LSTM,delta_protocol,-3.79,4.09,24.8,11.9
+LSTM,delta_model,0.45,4.74,19.0,14.0
+LSTM,interaction,0.77,5.31,48.5,15.2
+BERT,delta_protocol,-11.19,6.89,22.2,20.2
+BERT,delta_model,-9.8,6.33,19.0,18.7
+BERT,interaction,-10.08,9.97,43.1,28.6

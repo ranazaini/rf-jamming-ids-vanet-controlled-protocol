@@ -1,0 +1,46 @@
+{
+  "accuracy": 0.992,
+  "precision_macro": 0.9925925925925926,
+  "recall_macro": 0.9929078014184397,
+  "f1_macro": 0.992670452257259,
+  "confusion_matrix": [
+    [
+      34,
+      0,
+      0
+    ],
+    [
+      0,
+      46,
+      1
+    ],
+    [
+      0,
+      0,
+      44
+    ]
+  ],
+  "balanced_accuracy": 0.9929078014184397,
+  "majority_class": 1,
+  "majority_class_baseline_accuracy": 0.376,
+  "test_window_count_per_class": {
+    "0": 34,
+    "1": 47,
+    "2": 44
+  },
+  "test_episode_count_per_class": {
+    "0": 2,
+    "1": 2,
+    "2": 2
+  },
+  "model": "BERT",
+  "arch": "source",
+  "protocol": "pcmef",
+  "cell": "B",
+  "seed": 111,
+  "n_train": 469,
+  "n_test": 125,
+  "max_len": 344,
+  "target_speed": 25,
+  "code_hash": "df1ced4b17cf"
+}

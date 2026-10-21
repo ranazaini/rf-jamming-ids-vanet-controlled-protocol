@@ -1,0 +1,31 @@
+{
+  "accuracy": 1.0,
+  "precision_macro": 1.0,
+  "recall_macro": 1.0,
+  "f1_macro": 1.0,
+  "confusion_matrix": [
+    [
+      2295,
+      0
+    ],
+    [
+      0,
+      4683
+    ]
+  ],
+  "balanced_accuracy": 1.0,
+  "majority_class": 1,
+  "majority_class_baseline_accuracy": 0.6711092003439381,
+  "test_window_count_per_class": {
+    "0": 2295,
+    "1": 4683
+  },
+  "model": "RF_Stat",
+  "dataset": "JamShield",
+  "protocol": "pcmef",
+  "arch": "modified",
+  "seed": 456,
+  "n_train": 20424,
+  "n_test": 6978,
+  "code_hash": "8a715a3848f5"
+}

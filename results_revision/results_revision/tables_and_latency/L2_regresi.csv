@@ -1,0 +1,11 @@
+config,naskah_lama,baru,selisih_pp,penyebab
+hybrid_full,,85.48,,E3.1 meta di validation; E3.2 populasi 39 episode; kunci test K sama
+multi_no_knn,,86.25,,E3.1 / populasi / kunci K
+multi_no_xgb,,85.12,,E3.1 / populasi / kunci K
+multi_emb_only,,85.57,,E3.1 / populasi / kunci K
+bilstm_1s,,62.14,,E3.1 / populasi / kunci K
+bilstm_5s,,64.17,,E3.1 / populasi / kunci K
+bilstm_15s,,85.34,,E3.1 / populasi / kunci K
+xgb_only,,86.81,,E3.1 / populasi / kunci K
+RF_Stat_D,,85.28,,dievaluasi ulang pada K (subset window RF)
+LSTM_D,,85.78,,dievaluasi ulang pada K

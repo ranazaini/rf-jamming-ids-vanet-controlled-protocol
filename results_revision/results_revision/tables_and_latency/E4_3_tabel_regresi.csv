@@ -1,0 +1,9 @@
+model,speed,kuantitas,lama,baru,penyebab
+BERT,15,Δ protokol B−A (pp),-8.66,-7.25,populasi (D3) + 10→20 seed + sel C ditambah (D5)
+LSTM,15,Δ protokol B−A (pp),—,-2.93,aktivasi (D2/E3.3) + populasi (D3) + statistik unpaired (E3.7)
+LSTM,15,Δ model D−B (pp),—,-0.11,aktivasi (D2/E3.3) + populasi (D3)
+LSTM,25,Δ model D−B (pp),—,+0.89,aktivasi (D2/E3.3) + populasi (D3)
+RF_Stat,15,Δ model D−B (pp),—,+13.87,populasi (D3) + ABCD penuh (D7)
+RF_Stat,25,Δ model D−B (pp),—,+5.88,populasi (D3) + ABCD penuh (D7)
+kNN,15,Δ k=5 vs no_knn (pp),—,lihat notebook Poin 7,graf train-only (E3.4) + stacking di val (E3.1) + alignment
+kNN,25,Δ k=5 vs no_knn (pp),—,lihat notebook Poin 7,graf train-only (E3.4) + stacking di val (E3.1) + alignment
